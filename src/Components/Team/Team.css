@@ -1,0 +1,158 @@
+.team {
+    background-color: white; /* Set background color to white */
+    padding: 50px 0; 
+    width: 80%;
+    margin: auto;
+  }
+  
+  .team .container {
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add horizontal padding */
+  }
+  
+  .team .headings {
+    text-align: center; /* Center the title and subtitle */
+    margin-bottom: 40px; /* Space between headings and content */
+  }
+  
+  .team-title {
+    font-size: 2.5rem; /* Title font size */
+    font-weight: bold; /* Title font weight */
+    margin-bottom: 10px; /* Space below the title */
+  }
+  
+  .team-description {
+    font-size: 1.2rem; /* Subtitle font size */
+    color: #666; /* Subtitle color */
+  }
+  
+  .team .content {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between; /* Space between items */
+  }
+  
+  .team .box {
+    background-color: white; /* Set background color to white */
+    border-radius: 6px; /* Rounded corners */
+    border: 1px solid rgba(62, 28, 131, 0.1); /* Light border */
+    padding: 2rem; /* Padding inside each box */
+    transition: box-shadow 0.5s; /* Smooth transition for hover effect */
+    flex: 1 1 calc(33.333% - 20px); /* Three boxes in a row with space */
+    margin: 10px; /* Margin for spacing */
+  }
+  
+  .team .box:hover {
+    box-shadow: 0 0 20px rgba(112, 121, 138, 0.18); /* Shadow on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .team .details {
+    text-align: center; /* Center content in the details */
+    margin-top: 30px; /* Space above details */
+  }
+  
+  .team .img {
+    width: 90px; /* Image width */
+    height: 90px; /* Image height */
+    margin: auto; /* Center the image */
+    position: relative; /* Relative positioning for icon */
+  }
+  
+  .team img {
+    width: 90px; /* Image width */
+    height: 90px; /* Image height */
+    border-radius: 50%; /* Circular image */
+  }
+  
+  .team .img i {
+    color: #108be7; /* Color for the check icon */
+    font-size: 17px; /* Icon font size */
+    position: absolute; /* Absolute positioning for icon */
+    top: 35px; /* Position icon */
+    right: -10px; /* Position icon */
+  }
+  
+  .team .img::after {
+    content: ""; /* After pseudo-element for border */
+    position: absolute; /* Absolute positioning */
+    top: -15px; /* Position relative to image */
+    left: -15px; /* Position relative to image */
+    width: 110px; /* Width of the border */
+    height: 110px; /* Height of the border */
+    border: 5px solid #edf0f5; /* Border color and width */
+    border-radius: 50%; /* Circular border */
+  }
+  
+  .team label {
+    display: inline-block; /* Inline block for label */
+    margin-top: 20px; /* Space above label */
+  }
+  
+  .team i {
+    color: grey; /* Icon color */
+    margin-right: 5px; /* Space between icon and text */
+  }
+  
+  .team ul {
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: center; /* Center the icons horizontally */
+    padding: 0; /* Remove default padding */
+    margin-top: 10px; /* Space above the list */
+    list-style: none; /* Remove bullet points */
+}
+
+.team ul li {
+    display: flex; /* Change to flex for better alignment */
+    justify-content: center; /* Center the icon inside the li */
+    align-items: center; /* Center vertically */
+    width: 40px; /* Width of icons */
+    height: 40px; /* Height of icons */
+    line-height: 40px; /* Center text in icon */
+    background-color: white; /* Set background color to white */
+    border-radius: 50%; /* Circular icons */
+    margin: 5px; /* Space between icons */
+}
+  
+.team .button {
+    margin-top: 20px; /* Space above button container */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center buttons horizontally */
+    gap: 5px; 
+}
+  
+  .team .button i {
+    color: white; /* Icon color */
+    font-size: 20px; /* Icon font size */
+  }
+  
+  .btn3 {
+    background: #ff6922; /* Background color for button */
+    border-radius: 50px; /* Rounded button */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor */
+  }
+
+  .btn4 {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .btn6 {
+    background-color: #27ae60; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }

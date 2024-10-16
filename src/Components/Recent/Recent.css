@@ -1,0 +1,120 @@
+/* Container for recent properties */
+.recent-properties {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8fafc;
+  }
+  
+  /* Section title */
+  .recent-properties h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #4d4d4d;
+  }
+  
+  /* Section subtitle */
+  .recent-properties p {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 30px;
+  }
+  
+  /* Grid for the property cards */
+  .recent-properties .property-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Individual property card */
+  .recent-properties .property-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 30%; /* 3 cards in a row */
+    text-align: left; /* Align text to the left */
+    position: relative; /* Position relative for absolute child */
+  }
+  
+  .recent-properties .property-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Card image */
+  .recent-properties .property-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Title for cards */
+  .recent-properties .property-card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+  }
+  
+  /* Additional styling for your text elements */
+  .recent-properties .property-card .location {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Price info */
+  .recent-properties .price-info {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    margin-top: 10px; /* Space between the details and price info */
+  }
+  
+  /* Price button styling */
+  .recent-properties .price-button {
+    margin-right: 5px; /* Space between button and label */
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Button color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s;
+    font-size: 16px; /* Font size for price */
+  }
+  
+  .recent-properties .price-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  /* sqft label styling */
+  .recent-properties .sqft-label {
+    font-weight: normal; /* Optional: To make it look lighter */
+    font-size: 14px; /* Optional: Adjust font size if needed */
+  }
+  
+  /* Status styles */
+  .recent-properties .status {
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .recent-properties .rent {
+    color: #FF5733; /* Red for sale */
+  }
+  
+  .recent-properties .sale {
+    
+    color: #4CAF50; /* Green for rent */
+  }
+  
+  /* Property type styling */
+  .recent-properties .type {
+    position: absolute; /* Position it absolutely */
+    /* bottom: 10px; Align to the bottom */
+    right: 15px; /* Align to the right */
+    font-size: 16px; /* Font size for type */
+    color: #000000; /* Color for type */
+  }
+  

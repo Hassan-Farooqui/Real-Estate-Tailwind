@@ -1,0 +1,106 @@
+.price {
+    text-align: center; /* Center align text */
+    padding: 50px;
+    background-color: white; /* Set background color to white */
+  }
+  
+  .price .content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align boxes */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  .price .content .box {
+    width: 31.5%; /* Adjust width for three columns */
+    padding: 30px; /* Padding inside boxes */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+    display: flex; /* Use flexbox for content alignment */
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    justify-content: space-between; /* Distribute space between items */
+  }
+  
+  .price .box:nth-child(2) {
+    width: 35%; /* Make the second box slightly larger */
+    height: auto; /* Auto height to accommodate content */
+  }
+  
+  .price h1 {
+    color: #2d3954; /* Heading color */
+    font-size: 40px; /* Changed heading font size to 40px */
+    font-weight: 600; /* Heading font weight */
+    text-transform: capitalize; /* Capitalize text */
+    margin: 20px 0; /* Space above and below main heading */
+    border-radius: 20px; /* Add rounded corners */
+    padding: 10px; /* Add padding for spacing */
+  }
+  
+  .price h3 {
+    color: #2d3954; /* Plan title color */
+    font-size: 22px; /* Plan title font size */
+    font-weight: 600; /* Plan title font weight */
+    text-transform: capitalize; /* Capitalize text */
+    margin: 10px 0; /* Space above and below titles */
+  }
+  
+  .price h1 span {
+    font-size: 30px; /* Subheading size */
+    font-weight: 500; /* Medium font weight */
+  }
+  
+  .price-description {
+    font-size: 18px; /* Description font size */
+    color: #666; /* Description color */
+    margin: 10px 0; /* Space above and below description */
+    text-align: center; /* Center description text */
+  }
+  
+  .price ul {
+    margin-top: 40px; /* Space above the list */
+    padding: 0; /* Remove padding */
+    list-style: none; /* Remove default list style */
+  }
+  
+  .price ul li {
+    display: flex; /* Flex display for list items */
+    justify-content: center; /* Center list items */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px; /* Space below each list item */
+  }
+  
+  .price label {
+    width: 30px; /* Width of the label */
+    height: 30px; /* Height of the label */
+    line-height: 30px; /* Center text vertically */
+    border-radius: 50%; /* Circular label */
+    margin-right: 10px; /* Space to the right of the label */
+    display: flex; /* Use flexbox for icon */
+    justify-content: center; /* Center icon horizontally */
+    align-items: center; /* Center icon vertically */
+  }
+  
+  .price .btn5 {
+    width: 100%; /* Full width for the button */
+    padding: 12px; /* Button padding */
+    font-size: 16px; /* Button font size */
+    border-radius: 20px; /* Add rounded corners for the button */
+    border: 5px solid #27ae601f;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .price .content {
+      flex-direction: column; /* Stack boxes on smaller screens */
+    }
+  
+    .price .content .box {
+      width: 100%; /* Full width for boxes on small screens */
+      margin-bottom: 50px; /* Spacing between boxes */
+    }
+  
+    .price .box:nth-child(2) {
+      width: 100%; /* Keep the second box full width on smaller screens */
+    }
+  }
+  
