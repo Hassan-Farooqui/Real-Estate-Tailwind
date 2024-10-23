@@ -23,6 +23,7 @@ const App = () => {
       <Team/>
       <Price/>
       <Footer/>
+
     </div>
   )
 }

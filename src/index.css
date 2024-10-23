@@ -1,24 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Google Fonts */
+
+/* Additional global styles using Tailwind utilities */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif; /* Keep this custom style */
 }
 
 body {
-  background: #f5f5f5;
+  @apply bg-gray-100; /* Using Tailwind utility for background color */
 }
 
+/* Link styles using Tailwind */
 a {
-  text-decoration: none;
-  color: inherit;
-  line-height: 1;
-  cursor: pointer;
+  @apply no-underline text-inherit leading-none cursor-pointer; /* Tailwind utilities */
 }
 
+/* Global container style */
 .container {
-  padding-left: 10%;
-  padding-right: 10%;
+  @apply px-10; /* Using Tailwind for padding-left and padding-right */
 }

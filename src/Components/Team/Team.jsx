@@ -1,5 +1,4 @@
 import React from "react";
-import "./Team.css";
 
 // Import images at the top
 import team1 from "../../assets/team-1.jpg";
@@ -86,41 +85,43 @@ const Team = () => {
   ];
 
   return (
-    <section className='team background'>
-      <div className='container'>
+    <section className="bg-white py-12">
+      <div className="container mx-auto max-w-screen-lg px-4">
         {/* Inline Title and Paragraph */}
-        <div className="headings">
-          <h2 className="team-title">Our Featured Agents</h2>
-          <p className="team-description">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold mb-2">Our Featured Agents</h2>
+          <p className="text-lg text-gray-600">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </p>
         </div>
 
-        <div className='content mtop grid3'>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {team.map((val, index) => (
-            <div className='box' key={index}>
-              <button className='btn3'>{val.list} Listings</button>
-              <div className='details'>
-                <div className='img'>
-                  <img src={val.cover} alt={val.name} />
-                  <i className='fa-solid fa-circle-check'></i>
+            <div className="bg-white border border-gray-200 rounded-lg shadow-md p-4 transition-shadow duration-300 hover:shadow-lg" key={index}>
+              <button className="bg-orange-500 text-white rounded-full px-4 py-1 mb-4">{val.list} Listings</button>
+              <div className="text-center">
+                <div className="relative">
+                  <img src={val.cover} alt={val.name} className="w-24 h-24 rounded-full mx-auto" />
+                  <i className="fa-solid fa-circle-check text-blue-600 absolute top-20 right-10"></i>
                 </div>
-                <i className='fa fa-location-dot'></i>
-                <label>{val.address}</label>
-                <h4>{val.name}</h4>
+                <i className="fa fa-location-dot text-gray-500 mr-1"></i>
+                <label className="inline-block mt-2">{val.address}</label>
+                <h4 className="text-lg font-semibold mt-2">{val.name}</h4>
 
-                <ul>
+                <ul className="flex justify-center mt-2 space-x-2">
                   {val.icon.map((icon, index) => (
-                    <li key={index}>{icon}</li>
+                    <li key={index} className="w-10 h-10 flex items-center justify-center bg-white rounded-full border border-gray-200">
+                      {icon}
+                    </li>
                   ))}
                 </ul>
-                <div className='button flex'>
-                  <button className="btn6">
-                    <i className='fa fa-envelope'></i>
+                <div className="flex justify-center gap-2 mt-4">
+                  <button className="bg-green-600 text-white rounded px-4 py-2 flex items-center">
+                    <i className="fa fa-envelope mr-2"></i>
                     Message
                   </button>
-                  <button className='btn4'>
-                    <i className='fa fa-phone-alt'></i>
+                  <button className="bg-black text-white rounded px-4 py-2 flex items-center">
+                    <i className="fa fa-phone-alt mr-2"></i>
                   </button>
                 </div>
               </div>

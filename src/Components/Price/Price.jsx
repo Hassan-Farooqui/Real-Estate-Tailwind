@@ -1,5 +1,4 @@
 import React from "react";
-import "./Price.css";
 
 // Price data imported here
 export const priceData = [
@@ -84,39 +83,45 @@ export const priceData = [
 
 const Price = () => {
   return (
-    <section className='price padding'>
-      <div className='container'>
-        <h2 className='price-title'>Select Your Package</h2>
-        <p className='price-description'>
+    <section className='text-center p-12 bg-white'>
+      <div className='container mx-auto'>
+        <h2 className='text-3xl font-bold'>Select Your Package</h2>
+        <p className='text-lg text-gray-600 my-3'>
           At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.
         </p>
 
-        <div className='content flex mtop'>
+        <div className='flex justify-center flex-wrap mt-8'>
           {priceData.map((item, index) => (
-            <div className='box shadow' key={index}>
+            <div
+              className={`flex flex-col items-center justify-between p-8 rounded-lg shadow-md mx-4 mb-6 ${
+                item.best ? "w-80" : "w-72"
+              }`}
+              key={index}
+            >
               {/* Render the Best Value button conditionally */}
               {item.best && (
-                <div className='topbtn'>
-                  <button className='btn3'>{item.best}</button>
+                <div className='mb-4'>
+                  <button className='bg-orange-500 text-white rounded-full px-4 py-2'>
+                    {item.best}
+                  </button>
                 </div>
               )}
-              <h3>{item.plan}</h3>
-              <h1>
-                <span>$</span>
+              <h3 className='text-2xl font-semibold text-gray-800'>{item.plan}</h3>
+              <h1 className='text-4xl text-gray-900 font-semibold my-4'>
+                <span className='text-2xl'>$</span>
                 {item.price}
               </h1>
-              <p>{item.ptext}</p>
+              <p className='text-lg'>{item.ptext}</p>
 
-              <ul>
+              <ul className='mt-10 list-none p-0'>
                 {item.list.map((val, idx) => {
                   const { icon, text, change } = val;
                   return (
-                    <li key={idx}>
+                    <li key={idx} className='flex justify-center items-center mb-5'>
                       <label
-                        style={{
-                          background: change === "color" ? "#dc35451f" : "#27ae601f",
-                          color: change === "color" ? "#dc3848" : "#27ae60",
-                        }}
+                        className={`w-8 h-8 flex items-center justify-center rounded-full mr-2 ${
+                          change === "color" ? "bg-red-100 text-red-500" : "bg-green-100 text-green-500"
+                        }`}
                       >
                         {icon}
                       </label>
@@ -126,11 +131,9 @@ const Price = () => {
                 })}
               </ul>
               <button
-                className='btn5'
-                style={{
-                  background: item.plan === "Standard" ? "#27ae60" : "#fff",
-                  color: item.plan === "Standard" ? "#fff" : "#27ae60",
-                }}
+                className={`w-full py-3 rounded-full border-4 ${
+                  item.plan === "Standard" ? "bg-green-600 text-white" : "bg-white text-green-600"
+                }`}
               >
                 Start {item.plan}
               </button>

@@ -1,5 +1,4 @@
 import React from "react";
-import "./Location.css";
 
 // Import images at the top
 import city1 from "../../assets/city-1.png";
@@ -63,25 +62,29 @@ const Location = () => {
   ];
 
   return (
-    <section className='location padding'>
-      <div className='container'>
+    <section className="bg-white py-12 px-4 text-center">
+      <div className="container mx-auto">
         {/* Inline Title and Paragraph */}
-        <div className="headings">
-          <h2 className="location-title">Explore By Location</h2>
-          <p className="location-description">
+        <div className="mb-8">
+          <h2 className="text-4xl font-semibold text-gray-800">Explore By Location</h2>
+          <p className="text-base text-gray-600 mt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </p>
         </div>
 
-        <div className='content grid3 mtop'>
+        <div className="flex flex-wrap justify-center gap-6">
           {location.map((item) => (
-            <div className='box' key={item.id}>
-              <img src={item.cover} alt={item.name} />
-              <div className='overlay'>
-                <h5>{item.name}</h5>
-                <p>
-                  <label>{item.Villas}</label>
-                  <label>{item.Offices}</label>
+            <div className="relative w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 overflow-hidden rounded-md cursor-pointer group">
+              <img
+                src={item.cover}
+                alt={item.name}
+                className="w-full h-auto rounded-md"
+              />
+              <div className="absolute inset-0 flex items-center justify-center flex-col bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h5 className="text-lg font-medium text-white">{item.name}</h5>
+                <p className="text-white">
+                  <label className="mr-5">{item.Villas}</label>
+                  <label className="mr-5">{item.Offices}</label>
                   <label>{item.Apartments}</label>
                 </p>
               </div>
